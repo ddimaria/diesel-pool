@@ -1,0 +1,12 @@
+[package]
+name = "diesel-pool"
+version = "0.1.0"
+authors = ["David DiMaria <info@collectivesessions.com>"]
+edition = "2018"
+
+[dependencies]
+diesel = { version = "1.4.0", features = ["chrono", "mysql", "postgres", "sqlite", "r2d2", "uuidv07"] }
+r2d2 = "0.8"
+r2d2-diesel = "1.0.0"
+serde = "1.0"
+serde_derive = "1.0"
