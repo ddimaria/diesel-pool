@@ -1,6 +1,6 @@
 use crate::database::DatabaseConnection;
 
-#[derive(Deserialize, Debug)]
+#[derive(Clone, Deserialize, Debug)]
 pub struct Config {
     pub database_connection: DatabaseConnection,
     pub database_url: String,

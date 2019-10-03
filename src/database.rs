@@ -4,7 +4,7 @@ use crate::database_error::DatabaseError;
 use diesel::{mysql::MysqlConnection, pg::PgConnection, sqlite::SqliteConnection, Connection};
 
 #[serde(untagged)]
-#[derive(Deserialize, Debug, PartialEq)]
+#[derive(Clone, Deserialize, Debug, PartialEq)]
 #[serde(field_identifier, rename_all = "lowercase")]
 pub enum DatabaseConnection {
     Cockroach,
